@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=telelogo
+POSTGRES_USER=OrnXAsLRgojUiaCUVvZWLQyuToAkhMNO
+POSTGRES_PASSWORD=EfGqopt3dasfyRLpTw8S3GK1DaUvXc1NYllQeTDsk98K6KrWpEU2a0LzmaXytSoY
