@@ -1,1 +1,33 @@
 {% extends "base.html" %}
+
+{% block content %}
+
+  <h2>Welkom bij telelogopedie<span class="icon-emo-happy"></span></h2>
+
+  {% if request.user.is_authenticated %}
+
+    {% if request.user.is_student %}
+
+        Welkom {{ request.user.first_name }}
+
+    {% else %}
+
+        Beste logopediste, kies de patient waar je een logosessie mee wil starten.
+
+    {% endif %}
+
+        <iframe allow="camera; microphone; display-capture"
+                src="https://meet.jit.si/{{ user.username }}{{ user.date_joined|date:"u" }}#jitsi_meet_external_api_id=0&amp;config.defaultLanguage=%22nl%22"
+                name="jitsiConferenceFrame0" id="jitsiConferenceFrame0"
+                allowfullscreen="true"
+                style="height: 57vh; width: 100%; border: 0px;">
+        </iframe>
+
+  {% else %}
+
+    Met telelogopedie kan je logo geven aan iemand waar je geen fysiek contact mee mag hebben.
+    Best eerst aanlogen om met jouw telelogopedie te starten.
+
+  {% endif %}
+
+{% endblock %}
